@@ -680,7 +680,7 @@ function App() {
                   <div className="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 mb-6 md:mb-0 flex items-center justify-center">
                     <div className="relative w-full h-full rounded-full border-4 border-purple-500/30 shadow-lg shadow-purple-500/20">
                       <img 
-                        src="/1.jpg" 
+                        src="/pfp.jpg" 
                         alt="Profile"
                         className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500 rounded-full"
                       />
