@@ -273,7 +273,7 @@ function App() {
   const projects = [
     {
       title: "Smart Home Prototype",
-      category: "Academic Project",
+      category: "Machine Learning Project",
       description: "University project for home automation using Arduino and basic sensors",
       image: "/1.jpg",
       technologies: ["Arduino", "C++", "Sensors", "Basic Electronics"],
