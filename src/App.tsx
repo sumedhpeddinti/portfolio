@@ -281,7 +281,7 @@ function App() {
       image: "/1.jpg",
       technologies: ["YOLOv5", "Face Recognition", "OpenCV", "Gmail API"],
       liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://github.com/sumedhpeddinti/helmet-violation-alert-system"
     },
     {
       title: "Image Classification Model",
@@ -824,6 +824,8 @@ function App() {
                   <div className="flex space-x-4">
                     <a 
                       href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200 project-link"
                     >
                       <Eye className="w-4 h-4" />
@@ -831,6 +833,8 @@ function App() {
                     </a>
                     <a 
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200 project-link"
                     >
                       <Github className="w-4 h-4" />
