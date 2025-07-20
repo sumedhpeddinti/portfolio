@@ -193,7 +193,7 @@ function App() {
       // Machine Learning - Purple/Pink/Cyan gradients
       'Python': 'bg-gradient-to-r from-blue-400 to-cyan-500 text-white shadow-lg shadow-blue-500/40 border border-blue-300/50 hover:shadow-blue-500/60 hover:scale-105 hover:from-blue-500 hover:to-cyan-600',
       'Scikit-learn': 'bg-gradient-to-r from-purple-400 to-pink-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-pink-600',
-      'OpenCV': 'bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg shadow-teal-500/40 border border-teal-300/50 hover:shadow-teal-500/60 hover:scale-105 hover:from-teal-500 hover:to-cyan-600',
+      'OpenCV': 'bg-gradient-to-r from-purple-400 to-indigo-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-indigo-600',
       'Jupyter': 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-600/40 border border-orange-400/50 hover:shadow-orange-600/60 hover:scale-105 hover:from-orange-600 hover:to-red-700',
       'YOLOv8': 'bg-gradient-to-r from-green-400 to-emerald-600 text-white shadow-lg shadow-green-500/40 border border-green-300/50 hover:shadow-green-500/60 hover:scale-105 hover:from-green-500 hover:to-emerald-700',
       'Face Recognition': 'bg-gradient-to-r from-pink-400 to-rose-500 text-white shadow-lg shadow-pink-500/40 border border-pink-300/50 hover:shadow-pink-500/60 hover:scale-105 hover:from-pink-500 hover:to-rose-600',
@@ -217,7 +217,12 @@ function App() {
       'Electronics': 'bg-gradient-to-r from-amber-400 to-yellow-500 text-black shadow-lg shadow-amber-500/40 border border-amber-300/50 hover:shadow-amber-500/60 hover:scale-105 hover:from-amber-500 hover:to-yellow-600',
       'Circuit Analysis': 'bg-gradient-to-r from-violet-400 to-purple-500 text-white shadow-lg shadow-violet-500/40 border border-violet-300/50 hover:shadow-violet-500/60 hover:scale-105 hover:from-violet-500 hover:to-purple-600',
       'Data Logging': 'bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-lg shadow-rose-500/40 border border-rose-300/50 hover:shadow-rose-500/60 hover:scale-105 hover:from-rose-500 hover:to-pink-600',
-      'Serial Communication': 'bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-lg shadow-sky-500/40 border border-sky-300/50 hover:shadow-sky-500/60 hover:scale-105 hover:from-sky-500 hover:to-blue-600'
+      'Serial Communication': 'bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-lg shadow-sky-500/40 border border-sky-300/50 hover:shadow-sky-500/60 hover:scale-105 hover:from-sky-500 hover:to-blue-600',
+      
+      // Computer Vision & Image Processing
+      'Image Processing': 'bg-gradient-to-r from-purple-400 to-indigo-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-indigo-600',
+      'GUI': 'bg-gradient-to-r from-purple-400 to-indigo-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-indigo-600',
+      'Automation': 'bg-gradient-to-r from-purple-400 to-indigo-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-indigo-600'
     };
     
     return techStyles[tech] || 'bg-gradient-to-r from-purple-700/20 to-purple-600/20 text-purple-300 border border-purple-600/30';
@@ -324,7 +329,7 @@ function App() {
       category: "Computer Vision Project",
       description: "A Python desktop tool to extract faces from images inside PDF files.",
       image: "/face.webp",
-      technologies: ["KiCad", "PCB Design", "Electronics", "Circuit Analysis"],
+      technologies: ["Image Processing", "GUI", "OpenCV", "Automation"],
       liveUrl: "#",
       githubUrl: "#"
     }
