@@ -195,7 +195,7 @@ function App() {
       'Scikit-learn': 'bg-gradient-to-r from-purple-400 to-pink-500 text-white shadow-lg shadow-purple-500/40 border border-purple-300/50 hover:shadow-purple-500/60 hover:scale-105 hover:from-purple-500 hover:to-pink-600',
       'OpenCV': 'bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg shadow-teal-500/40 border border-teal-300/50 hover:shadow-teal-500/60 hover:scale-105 hover:from-teal-500 hover:to-cyan-600',
       'Jupyter': 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-600/40 border border-orange-400/50 hover:shadow-orange-600/60 hover:scale-105 hover:from-orange-600 hover:to-red-700',
-      'YOLOv5': 'bg-gradient-to-r from-green-400 to-emerald-600 text-white shadow-lg shadow-green-500/40 border border-green-300/50 hover:shadow-green-500/60 hover:scale-105 hover:from-green-500 hover:to-emerald-700',
+      'YOLOv8': 'bg-gradient-to-r from-green-400 to-emerald-600 text-white shadow-lg shadow-green-500/40 border border-green-300/50 hover:shadow-green-500/60 hover:scale-105 hover:from-green-500 hover:to-emerald-700',
       'Face Recognition': 'bg-gradient-to-r from-pink-400 to-rose-500 text-white shadow-lg shadow-pink-500/40 border border-pink-300/50 hover:shadow-pink-500/60 hover:scale-105 hover:from-pink-500 hover:to-rose-600',
       'Gmail API': 'bg-gradient-to-r from-red-400 to-orange-500 text-white shadow-lg shadow-red-500/40 border border-red-300/50 hover:shadow-red-500/60 hover:scale-105 hover:from-red-500 hover:to-orange-600',
       
@@ -277,9 +277,9 @@ function App() {
     {
       title: "Face-Aware Helmet Detection",
       category: "Machine Learning Project",
-      description: "University project for home automation using Arduino and basic sensors",
-      image: "/1.jpg",
-      technologies: ["YOLOv5", "Face Recognition", "OpenCV", "Gmail API"],
+      description: "If no helmet,recognises face and sends mail (used at uni enterence).",
+      image: "/helmet.png",
+      technologies: ["YOLOv8", "Face Recognition", "OpenCV", "Gmail API"],
       liveUrl: "#",
       githubUrl: "https://github.com/sumedhpeddinti/helmet-violation-alert-system"
     },
@@ -320,10 +320,10 @@ function App() {
       githubUrl: "#"
     },
     {
-      title: "Basic PCB Design",
-      category: "Learning Project",
-      description: "First PCB design project using KiCad for simple LED circuit",
-      image: "/1.jpg",
+      title: "Auto Face Extractor",
+      category: "Computer Vision Project",
+      description: "A Python desktop tool to extract faces from images inside PDF files.",
+      image: "/face.webp",
       technologies: ["KiCad", "PCB Design", "Electronics", "Circuit Analysis"],
       liveUrl: "#",
       githubUrl: "#"
@@ -792,7 +792,11 @@ function App() {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`w-full h-48 transition-transform duration-500 group-hover:scale-110 ${
+                      project.title === "Face-Aware Helmet Detection" 
+                        ? "object-cover object-top" 
+                        : "object-cover"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

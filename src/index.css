@@ -290,6 +290,7 @@ nav a:hover {
 /* Glass Morphism Effects */
 .glass {
   background: rgba(147, 51, 234, 0.1);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(147, 51, 234, 0.2);
 }
@@ -448,10 +449,34 @@ nav a:hover {
   }
   
   /* Disable light beam animations for reduced motion */
-  @keyframes lightBeamDiagonal,
-  @keyframes lightBeamHorizontal,
-  @keyframes auroraGlow,
-  @keyframes particleFloat,
+  @keyframes lightBeamDiagonal {
+    0%, 100% {
+      transform: none;
+      opacity: 0.1;
+    }
+  }
+  
+  @keyframes lightBeamHorizontal {
+    0%, 100% {
+      transform: none;
+      opacity: 0.1;
+    }
+  }
+  
+  @keyframes auroraGlow {
+    0%, 100% {
+      transform: none;
+      opacity: 0.1;
+    }
+  }
+  
+  @keyframes particleFloat {
+    0%, 100% {
+      transform: none;
+      opacity: 0.1;
+    }
+  }
+  
   @keyframes innerGlow {
     0%, 100% {
       transform: none;
@@ -504,6 +529,7 @@ nav a:hover {
 }
 
 .backdrop-blur-strong {
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 
@@ -514,6 +540,9 @@ nav a:hover {
 
 /* Interactive Elements */
 .interactive-element {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -604,6 +633,7 @@ body {
 .card-3d-purple {
   background: linear-gradient(135deg, rgba(147, 51, 234, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
   border: 1px solid rgba(147, 51, 234, 0.2);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(147, 51, 234, 0.1);
 }
