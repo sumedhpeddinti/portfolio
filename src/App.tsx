@@ -382,7 +382,8 @@ function App() {
               <a href="#skills" className="hover:text-purple-400 transition-colors duration-200">Skills</a>
               <a href="#services" className="hover:text-purple-400 transition-colors duration-200">Projects</a>
               <a href="#projects" className="hover:text-purple-400 transition-colors duration-200">Portfolio</a>
-              <a href="#testimonials" className="hover:text-purple-400 transition-colors duration-200">References</a>
+              <a href="#store" className="hover:text-purple-400 transition-colors duration-200">Gallery</a>
+              <a href="#testimonials" className="hover:text-purple-400 transition-colors duration-200">Hobbies</a>
               <a href="#contact" className="hover:text-purple-400 transition-colors duration-200">Contact</a>
               <button className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
                 Download Resume
@@ -406,7 +407,8 @@ function App() {
               <a href="#skills" className="block hover:text-purple-400 transition-colors duration-200">Skills</a>
               <a href="#services" className="block hover:text-purple-400 transition-colors duration-200">Projects</a>
               <a href="#projects" className="block hover:text-purple-400 transition-colors duration-200">Portfolio</a>
-              <a href="#testimonials" className="block hover:text-purple-400 transition-colors duration-200">References</a>
+              <a href="#store" className="block hover:text-purple-400 transition-colors duration-200">Gallery</a>
+              <a href="#testimonials" className="block hover:text-purple-400 transition-colors duration-200">Hobbies</a>
               <a href="#contact" className="block hover:text-purple-400 transition-colors duration-200">Contact</a>
               <button className="w-full bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-6 py-3 rounded-full font-medium transition-all duration-300">
                 Download Resume
@@ -859,6 +861,244 @@ function App() {
             <button className="group bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2 mx-auto">
               <span>View All Projects</span>
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Store Section */}
+      <section id="store" className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-title">
+              Image Gallery Store
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A collection of images showcasing my work and interests
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Image Card 1 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/helmet.png" 
+                  alt="Helmet Detection Project"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-purple-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    ML Project
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Helmet Detection System
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  AI-powered safety monitoring system
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-semibold">Featured</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Card 2 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/face.webp" 
+                  alt="Face Recognition"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-green-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    Computer Vision
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Face Extraction Tool
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Automated face detection and extraction
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-400 font-semibold">Active</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Card 3 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/f1.jpg" 
+                  alt="F1 Racing"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-red-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    Hobby
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Formula 1 & WRC
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Racing passion and motorsport enthusiasm
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-red-400 font-semibold">Passion</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Card 4 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/ufc.jpg" 
+                  alt="MMA Fighting"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-orange-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    Sports
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Mixed Martial Arts
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  UFC and MMA combat sports fan
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-orange-400 font-semibold">Active</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Card 5 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/music.jpg" 
+                  alt="Music"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-blue-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    Music
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Music & Audio
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  Sound engineering and music production
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-blue-400 font-semibold">Creative</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Card 6 */}
+            <div 
+              className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/pfp.jpg" 
+                  alt="Profile"
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-purple-600/80 backdrop-blur-sm rounded-full text-sm font-medium">
+                    Personal
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                  Professional Profile
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  ECE student and aspiring engineer
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-semibold">Featured</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Store Action Buttons */}
+          <div className="flex justify-center mt-12 space-x-4">
+            <button className="group bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">
+              <span>View All Images</span>
+              <Eye className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            </button>
+            <button className="group border-2 border-purple-400/30 hover:border-purple-400/60 text-white backdrop-blur-sm hover:shadow-2xl hover:shadow-purple-500/15 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+              <span>Download Gallery</span>
+              <Download className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             </button>
           </div>
         </div>
