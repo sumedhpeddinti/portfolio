@@ -43,6 +43,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [showAllProjectsMobile, setShowAllProjectsMobile] = useState(false);
+  const [showHobbiesMobile, setShowHobbiesMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showGoTop, setShowGoTop] = useState(false);
   const [showGoBottom, setShowGoBottom] = useState(true);
@@ -876,8 +877,21 @@ function App() {
             </p>
           </div>
 
+          {/* Mobile toggle button */}
+          {isMobile && (
+            <div className="flex justify-center mb-6">
+              <button
+                className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 px-6 py-2 rounded-full font-medium text-white transition-all duration-300 shadow-md"
+                onClick={() => setShowHobbiesMobile((prev) => !prev)}
+              >
+                {showHobbiesMobile ? 'Hide Hobbies' : 'Show Hobbies'}
+              </button>
+            </div>
+          )}
+
           {/* Hobbies Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {(!isMobile || showHobbiesMobile) && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* UFC & F1 */}
             <div 
               className="directional-3d group bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-lg border border-purple-500/20 rounded-3xl p-8 hover:border-purple-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25 relative overflow-hidden"
@@ -933,6 +947,7 @@ function App() {
               <p className="text-gray-300 text-lg">It feels amazing to listen to music while working innit lokey I play PND all day.😼</p>
             </div>
           </div>
+          )}
         </div>
       </section>
 
